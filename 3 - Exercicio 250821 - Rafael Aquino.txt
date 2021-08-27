@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS public.produto
+(
+    id_produto integer NOT NULL,
+    valor money,
+    categoria character varying
+);
+
+insert into produto(id_produto,valor,categoria) values(663782,25,'brinquedo');
+insert into produto(id_produto,valor,categoria) values(98371,90,'roupa');
+insert into produto(id_produto,valor,categoria) values(93171,35,'alimentacao');
+
+select * from produto;
+
+update produto 
+set valor = 102.99, id_produto = 398798
+where categoria = 'roupa';
+
+update produto
+set categoria = null;
+
+select * from produto where id_produto = 663782;

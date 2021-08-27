@@ -1,0 +1,22 @@
+
+CREATE TABLE IF NOT EXISTS public.loja
+(    
+id_loja integer NOT NULL,
+    m2 integer,
+    qtd_funcionarios integer
+);
+
+insert into loja(id_loja,m2,qtd_funcionarios) values(001, 85, 20);
+insert into loja(id_loja,m2,qtd_funcionarios) values(002, 123, 34);
+insert into loja(id_loja,m2,qtd_funcionarios) values(003, 210, 40);
+
+select * from loja;
+
+update loja 
+set id_loja = 004, qtd_funcionarios = 61
+where m2 = 210;
+
+update loja
+set qtd_funcionarios = null;
+
+select * from loja where m2 = 123;

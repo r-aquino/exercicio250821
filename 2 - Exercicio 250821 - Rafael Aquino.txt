@@ -1,0 +1,23 @@
+
+CREATE TABLE IF NOT EXISTS public.funcionario
+(
+    nome character varying COLLATE pg_catalog."default",
+    idade integer,
+    id_loja integer
+);
+
+insert into funcionario(nome,idade,id_loja) values('rafael',35,1);
+insert into funcionario(nome,idade,id_loja) values('ewertton',22,2);
+insert into funcionario(nome,idade,id_loja) values('marlon',23,3);
+
+select * from funcionario;
+
+update funcionario 
+set idade = 36, id_loja = 222777
+where nome = 'rafael';
+
+update funcionario
+set idade = null;
+
+select * from funcionario where nome = 'rafael';
+
